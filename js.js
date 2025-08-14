@@ -19,17 +19,10 @@ FEATURES
 
 */
 
-// const readline = require('readline');
-
-// Setup readline interface
-// const rl = readline.createInterface({
-//     input: process.stdin,
-//     output: process.stdout
-// });
 
 const game_num = 1;
-// let user = 4;
-let user = prompt("enter number between 1 to 10");
+let user = 4;
+// let user = prompt("enter number between 1 to 10");
 let life = 3;
 let guess = [
     "no, I am  greater.",
@@ -56,12 +49,6 @@ else {
 
     console.log(entries())
 
-
-    // Pause and wait for user to press Enter before continuing
-    rl.question("\nPress Enter to continue to the next part of the game...", function () {
-        console.log("Next part of the game starts now!");
-        rl.close();
-    });
 
 
 
