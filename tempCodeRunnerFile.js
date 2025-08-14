@@ -1,4 +1,4 @@
-// let life = 0;
+let life = 0;
 if (life < 3) {
     user = 5;
 }

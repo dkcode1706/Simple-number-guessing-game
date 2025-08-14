@@ -2,11 +2,26 @@
 
 const game_num = 4;
 
-let user = prompt("guess me, i'm natural number but less than 10.");
+// let user = prompt("guess me, i'm natural number but less than 10.");
+let user = undefined;
+// let user =7;
 
-let life = 4
-if (user < 10) {
+let life = 3
+if (user != game_num) {
     do {
+
+        // if (user < 10) {
+        if (life > 0) {
+            user = prompt(`${life}chance left,
+                    Try again.`);
+            // user= 5;
+        }
+        else {
+            console.log("game over!")
+        }
+
+
+        // }
 
         while (user <= 10 && user > 0) {
             switch (user) {
@@ -61,18 +76,7 @@ if (user < 10) {
 
         // console.log(life);
 
-        if (user != game_num) {
 
-            if (life > 0) {
-                user = prompt(`${life}chance left,
-                    Try again.`);
-            }
-            else {
-                console.log("game over!")
-            }
-
-
-        }
     }
 
     while (life > 0 && user != game_num);
