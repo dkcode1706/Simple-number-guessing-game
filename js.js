@@ -20,10 +20,10 @@ FEATURES
 */
 
 
-const game_num = 1;
-let user = 4;
-// let user = prompt("enter number between 1 to 10");
-let life = 3;
+const game_num = 4;
+// let user = 5;
+let user = prompt("guess me, i'm natural number but less than 10.");
+let life = 2;
 let guess = [
     "no, I am  greater.",
     "no, I'm one of it's family",
@@ -41,18 +41,43 @@ function entries() {
 
 }
 
-
+do {
 if (user > 10) {
     console.log("Please enter number between 1 to 10")
 }
 else {
 
-    console.log(entries())
+    // console.log(entries())
 
+    if (life > 1) {
+        while (user != game_num && life > 0) {
+            user = prompt(`${entries()} 
+             ${life} "chance left."
+             entered value = ${user}`)
+            // user=1;
+            --life;
+        }
+        if (user === game_num) {
+           alert("");
+        }
+        
+
+    }
+    else {
+        console.log("Game over!")
+        console.log(life, "chance left")
+        life--;
+
+    }
 
 
 
 }
+} while (life<1 && life>0){
+    --life;
+}
+
+    console.log(life);
 
 
 
